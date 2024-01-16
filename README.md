@@ -1,24 +1,33 @@
 # LeNet-5_PyTorch
 使用 PyTorch 實現 LeNet-5 神經網路來進行 MNIST 數據集分類
 
+## MNIST 數據集
+MNIST（Modified National Institute of Standards and Technology）是一個廣泛用於機器學習和深度學習的手寫數字圖像數據集。它由70,000張28x28像素的灰度圖片組成，每張圖片都包含一個手寫的單一數字，從0到9。
+
+![image](https://upload.wikimedia.org/wikipedia/commons/f/f7/MnistExamplesModified.png)
+
+## LeNet
+LeNet（LeNet-5）是由Yann LeCun等人於1998年提出的卷積神經網絡（Convolutional Neural Network, CNN）架構，是深度學習領域中的經典模型之一。
+![image](https://miro.medium.com/v2/resize:fit:720/format:webp/1*AwJZkWLKabIicUPzSN6KCg.png)
+
 ## 訓練模型
 ```bash
 python train.py
 ```
-![Alt text](image0.png)
+![Alt text](results/training_curve.png)
 ## 測試模型
 ```bash
-python train.py
+python test.py
 ```
-![Alt text](image1.png)
+![Alt text](results/confusion_matrix.png)
 ## 專案結構
 * `train.py` ： 用於訓練模型的腳本
 
 * `test.py` ： 用於測試模型的腳本
 
-* `model.py` ： LeNet-5 神經網路的定義
+* `model/LeNet.py` ： LeNet-5 神經網路的定義
 
-* `data.py` ： 用於下載和處理 MNIST 數據集的腳本
+* `dataset.py` ： 用於下載和處理 MNIST 數據集的腳本
 
 * `config.json` ： 訓練時的超參數設定
 ## 參考文獻
